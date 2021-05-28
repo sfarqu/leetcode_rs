@@ -36,7 +36,7 @@ impl Solution {
                 // Strategy: get max depth from left & right subtrees & add 1 for current node
 
                 // Borrow TreeNode out of the RefCell so we can access sub-trees
-                // Assign to variable because we can only borrow once.
+                // Assign to variable to make following lines shorter/clearer.
                 let node = node_rc.borrow();
                 // Using `clone` here is not expensive because we're cloning an Option
                 // and the pointer inside it, not the underlying TreeNode.
