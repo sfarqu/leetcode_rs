@@ -47,6 +47,7 @@ mod tests {
         // This seems like a really gross way to create a linked list, but I think it's inevitable
         // with the minimal "linked list" definition provided, and I don't feel like designing a
         // better one just for this test.
+        // TODO: create a macro like for `tree!` tests
         let (mut n1, mut n2, mut n3, mut n4, n5) =
             (ListNode::new(1),ListNode::new(2),ListNode::new(3), ListNode::new(4), ListNode::new(5));
         n4.next = Some(Box::new(n5));
